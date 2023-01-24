@@ -19,4 +19,12 @@ public class Employee {
       @Column(name="EmpolyeeContact")
 	private Long phoneNumber;
 	
+	// Mapping many employee to one company
+	@ManyToOne(cascade=CascadeType.ALL)
+	
+	//joining the companyId column to Employee Table
+	@JoinColumn(name="companyId")
+	private Company company;
+	
+	
 }
